@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Institute of Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .logo h1 {
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h3 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #2a5298;
+        }
+
+        .announcements {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .announcement {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #2a5298;
+            border-radius: 8px;
+        }
+
+        .announcement h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .status-open {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-closed {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-soon {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-upcoming {
+            background-color: #cce5ff;
+            color: #0056b3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-ongoing {
+            background-color: #e2e3e5;
+            color: #383d41;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .download-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .download-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #2a5298;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-card h4 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .download-btn {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .pdf-btn {
+            background: linear-gradient(45deg, #e53e3e, #c53030);
+        }
+
+        .docx-btn {
+            background: linear-gradient(45deg, #3182ce, #2b77cb);
+        }
+
+        .excel-btn {
+            background: linear-gradient(45deg, #38a169, #2f855a);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #2a5298;
+        }
+
+        .card h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            text-align: center;
+        }
+
+        .contact-card h4 {
+            margin-bottom: 0.5rem;
+            color: #2a5298;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .download-buttons {
+                justify-content: center;
+            }
+        }
+
+        /* Loading animation for downloads */
+        .loading {
+            display: none;
+            margin-left: 0.5rem;
+        }
+
+        .spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #1e3c72;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">EIT</div>
+                    <div>
+                        <h1>Elite Institute of Technology</h1>
+                        <p>Excellence in Technical Education</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#academics">Academics</a></li>
+                        <li><a href="#examinations">Examinations</a></li>
+                        <li><a href="#downloads">Downloads</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h2>Welcome to Elite Institute of Technology</h2>
+            <p>Empowering minds, shaping futures. Join our community of learners and innovators dedicated to technological excellence and research advancement.</p>
+        </section>
+
+        <section class="section">
+            <h3>🔔 Latest Announcements</h3>
+            <div class="announcements">
+                <div class="announcement">
+                    <h4>Winter Break Schedule Released</h4>
+                    <p>Winter break will commence from December 22, 2025. Classes will resume on January 10, 2026. Hostel facilities will remain open during the break.</p>
+                </div>
+                <div class="announcement">
+                    <h4>Final Examination Time Table - Semester VII</h4>
+                    <p>The final examination timetable for Semester VII has been published. Students are advised to check their exam dates and download the schedule.</p>
+                </div>
+                <div class="announcement">
+                    <h4>New Research Lab Inauguration</h4>
+                    <p>State-of-the-art AI and Machine Learning Research Lab will be inaugurated on October 15, 2025. All faculty and students are invited.</p>
+                </div>
+                <div class="announcement">
+                    <h4>Industry Partnership Program</h4>
+                    <p>New partnerships established with leading tech companies for internships and placement opportunities. Registration opens October 1, 2025.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="admissions" class="section">
+            <h3>📋 Admission Information</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                        <th>Application Deadline</th>
+                        <th>Annual Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Tech (Computer Science)</td>
+                        <td>4 Years</td>
+                        <td><span class="status-open">Open</span></td>
+                        <td>October 30, 2025</td>
+                        <td>₹1,50,000</td>
+                    </tr>
+                    <tr>
+                        <td>B.Tech (Electronics)</td>
+                        <td>4 Years</td>
+                        <td><span class="status-open">Open</span></td>
+                        <td>October 30, 2025</td>
+                        <td>₹1,45,000</td>
+                    </tr>
+                    <tr>
+                        <td>M.Tech (AI & ML)</td>
+                        <td>2 Years</td>
+                        <td><span class="status-open">Open</span></td>
+                        <td>November 5, 2025</td>
+                        <td>₹2,00,000</td>
+                    </tr>
+                    <tr>
+                        <td>MBA (Technology Management)</td>
+                        <td>2 Years</td>
+                        <td><span class="status-soon">Opening Soon</span></td>
+                        <td>November 15, 2025</td>
+                        <td>₹2,50,000</td>
+                    </tr>
+                    <tr>
+                        <td>MCA</td>
+                        <td>3 Years</td>
+                        <td><span class="status-closed">Closed</span></td>
+                        <td>September 30, 2025</td>
+                        <td>₹1,20,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="academics" class="section">
+            <h3>📚 Academic Information</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Fee Structure</h4>
+                    <p>Complete fee structure for all programs including tuition fees, hostel charges, laboratory fees, and other academic expenses.</p>
+                </div>
+                <div class="card">
+                    <h4>Academic Calendar</h4>
+                    <p>Important academic dates, semester schedules, holiday information, and examination dates for the current academic year 2025-26.</p>
+                </div>
+                <div class="card">
+                    <h4>Syllabus & Curriculum</h4>
+                    <p>Detailed syllabus, course curriculum, subject-wise information, and credit distribution for all undergraduate and postgraduate programs.</p>
+                </div>
+                <div class="card">
+                    <h4>Faculty Directory</h4>
+                    <p>Complete faculty information including qualifications, research interests, publications, and contact details.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="examinations" class="section">
+            <h3>📝 Examination Information</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Examination</th>
+                        <th>Semester</th>
+                        <th>Date Range</th>
+                        <th>Status</th>
+                        <th>Results</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mid-Term Examination</td>
+                        <td>Odd Semester</td>
+                        <td>October 20 - October 30</td>
+                        <td><span class="status-upcoming">Upcoming</span></td>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <td>Final Examination</td>
+                        <td>Odd Semester</td>
+                        <td>December 15 - December 28</td>
+                        <td><span class="status-upcoming">Upcoming</span></td>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <td>Supplementary Examination</td>
+                        <td>Even Semester</td>
+                        <td>September 25 - October 5</td>
+                        <td><span class="status-ongoing">Ongoing</span></td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>Internal Assessment</td>
+                        <td>All Semesters</td>
+                        <td>Continuous</td>
+                        <td><span class="status-ongoing">Ongoing</span></td>
+                        <td>Updated Weekly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="downloads" class="section">
+            <h3>📥 Downloads Center</h3>
+            <div class="download-section">
+                <div class="download-card">
+                    <h4>📋 Admission Documents</h4>
+                    <div class="download-buttons">
+                        <button class="download-btn pdf-btn" onclick="downloadFile('admission-brochure', 'pdf')">
+                            📄 Admission Brochure PDF
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn excel-btn" onclick="downloadFile('fee-structure', 'excel')">
+                            💰 Fee Structure Excel
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-card">
+                    <h4>🎓 Academic Documents</h4>
+                    <div class="download-buttons">
+                        <button class="download-btn pdf-btn" onclick="downloadFile('academic-calendar', 'pdf')">
+                            📅 Academic Calendar PDF
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn docx-btn" onclick="downloadFile('syllabus', 'docx')">
+                            📚 Syllabus DOCX
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn excel-btn" onclick="downloadFile('course-structure', 'excel')">
+                            🏗️ Course Structure Excel
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn pdf-btn" onclick="downloadFile('exam-timetable', 'pdf')">
+                            📅 Exam Timetable PDF
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn docx-btn" onclick="downloadFile('application-form', 'docx')">
+                            📝 Application Form DOCX
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-card">
+                    <h4>📊 Student Data & Research</h4>
+                    <div class="download-buttons">
+                        <button class="download-btn excel-btn" onclick="downloadFile('student-database', 'excel')">
+                            👥 Student Database Excel
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn excel-btn" onclick="downloadFile('result-analysis', 'excel')">
+                            📈 Result Analysis Excel
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn excel-btn" onclick="downloadFile('research-data', 'excel')">
+                            🔬 Research Data Excel
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn pdf-btn" onclick="downloadFile('scholarship-form', 'pdf')">
+                            💰 Scholarship Form PDF
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-card">
+                    <h4>💼 Placement & Career</h4>
+                    <div class="download-buttons">
+                        <button class="download-btn pdf-btn" onclick="downloadFile('placement-brochure', 'pdf')">
+                            💼 Placement Brochure PDF
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn docx-btn" onclick="downloadFile('resume-template', 'docx')">
+                            📋 Resume Template DOCX
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                        <button class="download-btn excel-btn" onclick="downloadFile('company-list', 'excel')">
+                            🏢 Recruiter Companies Excel
+                            <div class="loading"><div class="spinner"></div></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h3>📞 Contact Information</h3>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h4>📍 Address</h4>
+                    <p>Elite Institute of Technology<br>
+                    Sector 62, Noida<br>
+                    Uttar Pradesh - 201309, India</p>
+                </div>
+                <div class="contact-card">
+                    <h4>📞 Phone</h4>
+                    <p>Main Office: +91-120-4567890<br>
+                    Admissions: +91-120-4567891<br>
+                    Placements: +91-120-4567892</p>
+                </div>
+                <div class="contact-card">
+                    <h4>✉️ Email</h4>
+                    <p>info@eliteitech.ac.in<br>
+                    admissions@eliteitech.ac.in<br>
+                    placements@eliteitech.ac.in</p>
+                </div>
+                <div class="contact-card">
+                    <h4>🌐 Website</h4>
+                    <p>www.eliteitech.ac.in<br>
+                    Online Portal: portal.eliteitech.ac.in<br>
+                    Library: library.eliteitech.ac.in</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Elite Institute of Technology. All rights reserved.</p>
+            <p>Affiliated to AKTU | Approved by AICTE | Accredited by NAAC</p>
+        </div>
+    </footer>
+
+    <!-- jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- SheetJS for Excel (.xlsx) generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // PDF generation using jsPDF - FIXED VERSION
+        function generatePDFContent(fileName) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Set font and add title
+            doc.setFontSize(20);
+            doc.text('Elite Institute of Technology', 20, 20);
+
+            doc.setFontSize(16);
+            let yPosition = 40;
+
+            // Add content based on fileName
+            if (fileName === 'admission-brochure') {
+                doc.text('ADMISSION BROCHURE 2025-26', 20, yPosition);
+                yPosition += 20;
+                doc.setFontSize(12);
+                doc.text('ABOUT THE INSTITUTE', 20, yPosition);
+                yPosition += 10;
+                doc.text('Elite Institute of Technology is a premier technical institution', 20, yPosition);
+                yPosition += 8;
+                doc.text('dedicated to excellence in engineering education and research.', 20, yPosition);
+                yPosition += 15;
+
+                doc.text('PROGRAMS OFFERED:', 20, yPosition);
+                yPosition += 10;
+                doc.text('• B.Tech - Computer Science Engineering (4 Years)', 25, yPosition);
+                yPosition += 8;
+                doc.text('• B.Tech - Electronics & Communication (4 Years)', 25, yPosition);
+                yPosition += 8;
+                doc.text('• M.Tech - Artificial Intelligence & Machine Learning (2 Years)', 25, yPosition);
+                yPosition += 8;
+                doc.text('• MBA - Technology Management (2 Years)', 25, yPosition);
+                yPosition += 8;
+                doc.text('• MCA - Master of Computer Applications (3 Years)', 25, yPosition);
+                yPosition += 15;
+
+                doc.text('CONTACT INFORMATION:', 20, yPosition);
+                yPosition += 10;
+                doc.text('Elite Institute of Technology', 25, yPosition);
+                yPosition += 8;
+                doc.text('Sector 62, Noida, UP - 201309', 25, yPosition);
+                yPosition += 8;
+                doc.text('Phone: +91-120-4567890', 25, yPosition);
+                yPosition += 8;
+                doc.text('Email: admissions@eliteitech.ac.in', 25, yPosition);
+                yPosition += 8;
+                doc.text('Website: www.eliteitech.ac.in', 25, yPosition);
+
+            } else if (fileName === 'academic-calendar') {
+                doc.text('ACADEMIC CALENDAR 2025-26', 20, yPosition);
+                yPosition += 20;
+                doc.setFontSize(12);
+
+                doc.text('SEMESTER I (ODD SEMESTER)', 20, yPosition);
+                yPosition += 15;
+                doc.text('Registration & Orientation:', 20, yPosition);
+                yPosition += 8;
+                doc.text('• New Student Registration: July 15-20, 2025', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Orientation Program: July 21-22, 2025', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Classes Commence: July 25, 2025', 25, yPosition);
+                yPosition += 15;
+
+                doc.text('Academic Activities:', 20, yPosition);
+                yPosition += 8;
+                doc.text('• Mid-Term Examination: October 20-30, 2025', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Final Examination: December 15-28, 2025', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Result Declaration: January 15, 2026', 25, yPosition);
+                yPosition += 15;
+
+                doc.text('Important Holidays:', 20, yPosition);
+                yPosition += 8;
+                doc.text('• Independence Day: August 15, 2025', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Diwali Break: November 1-5, 2025', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Winter Break: December 22, 2025 - January 9, 2026', 25, yPosition);
+
+            } else if (fileName === 'exam-timetable') {
+                doc.text('FINAL EXAMINATION TIMETABLE', 20, yPosition);
+                yPosition += 15;
+                doc.text('ODD SEMESTER 2025-26', 20, yPosition);
+                yPosition += 20;
+                doc.setFontSize(12);
+
+                doc.text('EXAMINATION INSTRUCTIONS:', 20, yPosition);
+                yPosition += 10;
+                doc.text('• Report to examination hall 15 minutes before exam', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Carry valid ID card and hall ticket', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Mobile phones strictly prohibited', 25, yPosition);
+                yPosition += 8;
+                doc.text('• Use only blue/black ball point pen', 25, yPosition);
+                yPosition += 20;
+
+                doc.text('B.TECH COMPUTER SCIENCE - SEMESTER I', 20, yPosition);
+                yPosition += 15;
+                doc.text('December 15, 2025 (Monday) - 9:30 AM', 20, yPosition);
+                yPosition += 8;
+                doc.text('Subject: Engineering Mathematics I', 25, yPosition);
+                yPosition += 8;
+                doc.text('Hall: Block A, Rooms 101-105', 25, yPosition);
+                yPosition += 15;
+
+                doc.text('December 16, 2025 (Tuesday) - 9:30 AM', 20, yPosition);
+                yPosition += 8;
+                doc.text('Subject: Engineering Physics', 25, yPosition);
+                yPosition += 8;
+                doc.text('Hall: Block A, Rooms 101-105', 25, yPosition);
+
+            } else if (fileName === 'scholarship-form') {
+                doc.text('SCHOLARSHIP APPLICATION FORM', 20, yPosition);
+                yPosition += 20;
+                doc.setFontSize(12);
+
+                doc.text('PERSONAL INFORMATION', 20, yPosition);
+                yPosition += 15;
+                doc.text('Name: _________________________________', 20, yPosition);
+                yPosition += 10;
+                doc.text('Father\'s Name: _________________________', 20, yPosition);
+                yPosition += 10;
+                doc.text('Date of Birth: __________________________', 20, yPosition);
+                yPosition += 10;
+                doc.text('Gender: _______________________________', 20, yPosition);
+                yPosition += 15;
+
+                doc.text('ACADEMIC INFORMATION', 20, yPosition);
+                yPosition += 15;
+                doc.text('Current Program: ________________________', 20, yPosition);
+                yPosition += 10;
+                doc.text('Semester: ______________________________', 20, yPosition);
+                yPosition += 10;
+                doc.text('Current CGPA: ___________________________', 20, yPosition);
+                yPosition += 15;
+
+                doc.text('SCHOLARSHIP TYPE', 20, yPosition);
+                yPosition += 10;
+                doc.text('☐ Merit-based Scholarship', 20, yPosition);
+                yPosition += 8;
+                doc.text('☐ Need-based Financial Assistance', 20, yPosition);
+                yPosition += 8;
+                doc.text('☐ Sports Scholarship', 20, yPosition);
+                yPosition += 8;
+                doc.text('☐ Research Scholarship', 20, yPosition);
+
+            } else {
+                // Default content for other files
+                doc.text('DOCUMENT: ' + fileName.toUpperCase(), 20, yPosition);
+                yPosition += 20;
+                doc.setFontSize(12);
+                doc.text('This is a sample document generated by', 20, yPosition);
+                yPosition += 8;
+                doc.text('Elite Institute of Technology.', 20, yPosition);
+                yPosition += 15;
+                doc.text('Document Type: PDF', 20, yPosition);
+                yPosition += 8;
+                doc.text('Generated On: ' + new Date().toLocaleString(), 20, yPosition);
+                yPosition += 15;
+                doc.text('For more information, visit: www.eliteitech.ac.in', 20, yPosition);
+            }
+
+            // Add footer
+            doc.setFontSize(10);
+            doc.text('Generated on: ' + new Date().toLocaleString(), 20, 280);
+
+            return doc.output('arraybuffer');
+        }
+
+        // Excel generation using SheetJS
+        function generateExcelContent(fileName) {
+            let ws_data = [];
+
+            if (fileName === 'fee-structure') {
+                ws_data = [
+                    ['Program', 'Annual Fee', 'Tuition', 'Development', 'Laboratory', 'Library', 'Sports'],
+                    ['B.Tech CSE', '1,50,000', '1,20,000', '15,000', '10,000', '3,000', '2,000'],
+                    ['B.Tech ECE', '1,45,000', '1,15,000', '15,000', '10,000', '3,000', '2,000'],
+                    ['M.Tech AI&ML', '2,00,000', '1,70,000', '15,000', '10,000', '3,000', '2,000'],
+                    ['MBA Tech Mgmt', '2,50,000', '2,20,000', '15,000', '10,000', '3,000', '2,000'],
+                    ['MCA', '1,20,000', '95,000', '15,000', '8,000', '1,500', '500']
+                ];
+            } else if (fileName === 'student-database') {
+                ws_data = [
+                    ['Student ID', 'Name', 'Program', 'Semester', 'Phone', 'Email', 'Address'],
+                    ['EIT001', 'Rahul Sharma', 'B.Tech CSE', '3', '9876543210', 'rahul@example.com', 'Delhi'],
+                    ['EIT002', 'Priya Singh', 'B.Tech ECE', '5', '9876543211', 'priya@example.com', 'Mumbai'],
+                    ['EIT003', 'Amit Kumar', 'M.Tech AI', '1', '9876543212', 'amit@example.com', 'Pune'],
+                    ['EIT004', 'Sneha Patel', 'MBA', '3', '9876543213', 'sneha@example.com', 'Ahmedabad'],
+                    ['EIT005', 'Vikash Gupta', 'MCA', '2', '9876543214', 'vikash@example.com', 'Kolkata']
+                ];
+            } else if (fileName === 'company-list') {
+                ws_data = [
+                    ['Company Name', 'Industry', 'Package Range', 'Positions', 'Contact Person', 'Email'],
+                    ['TCS', 'IT Services', '3.5-8 LPA', 'Software Engineer', 'Mr. Rajesh', 'recruitment@tcs.com'],
+                    ['Infosys', 'IT Services', '4-10 LPA', 'Systems Engineer', 'Ms. Priya', 'careers@infosys.com'],
+                    ['Wipro', 'IT Services', '3.8-9 LPA', 'Developer', 'Mr. Amit', 'jobs@wipro.com'],
+                    ['Microsoft', 'Software', '12-25 LPA', 'Software Developer', 'Ms. Sarah', 'careers@microsoft.com'],
+                    ['Google', 'Technology', '15-30 LPA', 'SDE', 'Mr. John', 'jobs@google.com'],
+                    ['Amazon', 'E-commerce', '8-20 LPA', 'Software Engineer', 'Ms. Lisa', 'careers@amazon.com']
+                ];
+            } else if (fileName === 'course-structure') {
+                ws_data = [
+                    ['Course Code', 'Course Name', 'Credits', 'Semester', 'Department'],
+                    ['BCS101', 'Engineering Mathematics I', '4', '1', 'Basic Sciences'],
+                    ['BCS102', 'Engineering Physics', '4', '1', 'Basic Sciences'],
+                    ['BCS103', 'Programming Fundamentals', '4', '1', 'Computer Science'],
+                    ['BCS201', 'Data Structures', '4', '2', 'Computer Science'],
+                    ['BCS301', 'Database Management Systems', '4', '3', 'Computer Science']
+                ];
+            } else if (fileName === 'result-analysis') {
+                ws_data = [
+                    ['Student ID', 'Name', 'Subject', 'Marks', 'Grade', 'Result'],
+                    ['EIT001', 'Rahul Sharma', 'Mathematics', '85', 'A', 'Pass'],
+                    ['EIT002', 'Priya Singh', 'Physics', '78', 'B+', 'Pass'],
+                    ['EIT003', 'Amit Kumar', 'Programming', '92', 'A+', 'Pass'],
+                    ['EIT004', 'Sneha Patel', 'Database', '88', 'A', 'Pass'],
+                    ['EIT005', 'Vikash Gupta', 'Networks', '76', 'B+', 'Pass']
+                ];
+            } else if (fileName === 'research-data') {
+                ws_data = [
+                    ['Research Area', 'Faculty', 'Publications', 'Projects', 'Budget'],
+                    ['Artificial Intelligence', 'Dr. Sharma', '25', '8', '15,00,000'],
+                    ['Machine Learning', 'Dr. Patel', '18', '6', '12,00,000'],
+                    ['Data Science', 'Dr. Kumar', '22', '7', '10,00,000'],
+                    ['Cybersecurity', 'Dr. Singh', '20', '5', '8,00,000'],
+                    ['IoT Systems', 'Dr. Gupta', '15', '4', '6,00,000']
+                ];
+            } else {
+                // Default Excel content
+                ws_data = [
+                    ['Document Type', 'File Name', 'Generated On'],
+                    ['Excel Spreadsheet', fileName, new Date().toLocaleString()],
+                    ['Sample', 'Data', 'Content'],
+                    ['Row 1', 'Column 2', 'Column 3']
+                ];
+            }
+
+            let wb = XLSX.utils.book_new();
+            let ws = XLSX.utils.aoa_to_sheet(ws_data);
+            XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+            return XLSX.write(wb, { bookType: "xlsx", type: "array" });
+        }
+
+        // DOCX generation (simple text-based)
+        function generateDOCXContent(fileName) {
+            let content = `Elite Institute of Technology\n\n`;
+            content += `DOCUMENT: ${fileName.toUpperCase().replace('-', ' ')}\n\n`;
+            content += `This is a sample DOCX document generated for Elite Institute of Technology.\n\n`;
+            content += `Document Type: Microsoft Word Document\n`;
+            content += `File Name: ${fileName}\n`;
+            content += `Generated On: ${new Date().toLocaleString()}\n\n`;
+
+            if (fileName === 'application-form') {
+                content += `APPLICATION FORM 2025-26\n\n`;
+                content += `PERSONAL INFORMATION\n`;
+                content += `Name: ________________________________\n`;
+                content += `Father's Name: _________________________\n`;
+                content += `Date of Birth: __________________________\n`;
+                content += `Gender: _______________________________\n\n`;
+                content += `CONTACT INFORMATION\n`;
+                content += `Address: _______________________________\n`;
+                content += `Phone: ________________________________\n`;
+                content += `Email: ________________________________\n\n`;
+                content += `ACADEMIC INFORMATION\n`;
+                content += `Program Applied: _______________________\n`;
+                content += `Previous Qualification: __________________\n`;
+                content += `Percentage: ____________________________\n`;
+            } else if (fileName === 'syllabus') {
+                content += `SYLLABUS - B.TECH COMPUTER SCIENCE\n\n`;
+                content += `SEMESTER I\n`;
+                content += `• Engineering Mathematics I\n`;
+                content += `• Engineering Physics\n`;
+                content += `• Programming Fundamentals\n\n`;
+                content += `SEMESTER II\n`;
+                content += `• Data Structures\n`;
+                content += `• Digital Logic Design\n`;
+                content += `• Computer Organization\n`;
+            }
+
+            content += `\n\nFor more information, visit: www.eliteitech.ac.in`;
+            return new TextEncoder().encode(content);
+        }
+
+        // Download handler
+        async function downloadFile(fileName, fileType) {
+            const button = event.target;
+            const loading = button.querySelector('.loading');
+            loading.style.display = 'inline-block';
+            button.disabled = true;
+
+            try {
+                let content, mimeType, extension;
+
+                switch (fileType.toLowerCase()) {
+                    case 'pdf':
+                        content = generatePDFContent(fileName);
+                        mimeType = 'application/pdf';
+                        extension = 'pdf';
+                        break;
+                    case 'docx':
+                        content = generateDOCXContent(fileName);
+                        mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+                        extension = 'docx';
+                        break;
+                    case 'excel':
+                        content = generateExcelContent(fileName);
+                        mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+                        extension = 'xlsx';
+                        break;
+                    default:
+                        throw new Error('Unsupported file type');
+                }
+
+                const blob = new Blob([content], { type: mimeType });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `${fileName}.${extension}`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+
+                showNotification(`${fileName}.${extension} downloaded successfully!`, 'success');
+
+            } catch (error) {
+                console.error('Download error:', error);
+                showNotification(`Error downloading file: ${error.message}`, 'error');
+            } finally {
+                loading.style.display = 'none';
+                button.disabled = false;
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type) {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 8px;
+                color: white;
+                font-weight: 500;
+                z-index: 10000;
+                animation: slideIn 0.3s ease-out;
+                max-width: 400px;
+                word-wrap: break-word;
+            `;
+
+            if (type === 'success') {
+                notification.style.background = 'linear-gradient(45deg, #38a169, #2f855a)';
+            } else {
+                notification.style.background = 'linear-gradient(45deg, #e53e3e, #c53030)';
+            }
+
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Add CSS for notification animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

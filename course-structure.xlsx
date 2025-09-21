@@ -1,0 +1,18 @@
+Course Code,Course Name,Credits,Semester,Department,Prerequisites
+BCS101,Engineering Mathematics I,4,1,Basic Sciences,None
+BCS102,Engineering Physics,4,1,Basic Sciences,None
+BCS103,Engineering Chemistry,3,1,Basic Sciences,None
+BCS104,Programming Fundamentals,4,1,Computer Science,None
+BCS105,Engineering Graphics,2,1,Mechanical,None
+BCS201,Data Structures,4,2,Computer Science,Programming Fundamentals
+BCS202,Digital Logic Design,4,2,Electronics,Engineering Mathematics I
+BCS203,Computer Organization,4,2,Computer Science,Digital Logic Design
+BCS204,Discrete Mathematics,4,2,Mathematics,Engineering Mathematics I
+BCS301,Database Management Systems,4,3,Computer Science,Data Structures
+BCS302,Operating Systems,4,3,Computer Science,Computer Organization
+BCS303,Computer Networks,4,3,Computer Science,Data Structures
+BCS304,Software Engineering,3,3,Computer Science,Programming Fundamentals
+BCS401,Design and Analysis of Algorithms,4,4,Computer Science,Data Structures
+BCS402,Web Technologies,4,4,Computer Science,Programming Fundamentals
+BCS403,Computer Graphics,3,4,Computer Science,Mathematics
+BCS404,System Programming,3,4,Computer Science,Operating Systems

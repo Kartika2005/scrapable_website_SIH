@@ -1,0 +1,109 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 400
+>>
+stream
+BT
+/F1 20 Tf
+100 700 Td
+(Elite Institute of Technology) Tj
+0 -30 Td
+/F1 16 Tf
+(FINAL EXAMINATION TIMETABLE) Tj
+0 -15 Td
+(ODD SEMESTER 2025-26) Tj
+0 -20 Td
+/F1 12 Tf
+(EXAMINATION INSTRUCTIONS:) Tj
+0 -10 Td
+(• Report to examination hall 15 minutes before exam) Tj
+0 -8 Td
+(• Carry valid ID card and hall ticket) Tj
+0 -8 Td
+(• Mobile phones strictly prohibited) Tj
+0 -8 Td
+(• Use only blue/black ball point pen) Tj
+0 -20 Td
+(B.TECH COMPUTER SCIENCE - SEMESTER I) Tj
+0 -15 Td
+(December 15, 2025 (Monday) - 9:30 AM) Tj
+0 -8 Td
+(Subject: Engineering Mathematics I) Tj
+0 -8 Td
+(Hall: Block A, Rooms 101-105) Tj
+0 -15 Td
+(December 16, 2025 (Tuesday) - 9:30 AM) Tj
+0 -8 Td
+(Subject: Engineering Physics) Tj
+0 -8 Td
+(Hall: Block A, Rooms 101-105) Tj
+0 -15 Td
+(December 17, 2025 (Wednesday) - 9:30 AM) Tj
+0 -8 Td
+(Subject: Programming Fundamentals) Tj
+0 -8 Td
+(Hall: Block B, Rooms 201-205) Tj
+0 -15 Td
+(December 18, 2025 (Thursday) - 9:30 AM) Tj
+0 -8 Td
+(Subject: Engineering Chemistry) Tj
+0 -8 Td
+(Hall: Block A, Rooms 101-105) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000000725 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+820
+%%EOF

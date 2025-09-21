@@ -1,0 +1,101 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 200
+>>
+stream
+BT
+/F1 20 Tf
+100 700 Td
+(Elite Institute of Technology) Tj
+0 -30 Td
+/F1 16 Tf
+(ADMISSION BROCHURE 2025-26) Tj
+0 -20 Td
+/F1 12 Tf
+(ABOUT THE INSTITUTE) Tj
+0 -10 Td
+(Elite Institute of Technology is a premier technical institution) Tj
+0 -8 Td
+(dedicated to excellence in engineering education and research.) Tj
+0 -15 Td
+(PROGRAMS OFFERED:) Tj
+0 -10 Td
+(• B.Tech - Computer Science Engineering (4 Years)) Tj
+0 -8 Td
+(• B.Tech - Electronics & Communication (4 Years)) Tj
+0 -8 Td
+(• M.Tech - Artificial Intelligence & Machine Learning (2 Years)) Tj
+0 -8 Td
+(• MBA - Technology Management (2 Years)) Tj
+0 -8 Td
+(• MCA - Master of Computer Applications (3 Years)) Tj
+0 -15 Td
+(CONTACT INFORMATION:) Tj
+0 -10 Td
+(Elite Institute of Technology) Tj
+0 -8 Td
+(Sector 62, Noida, UP - 201309) Tj
+0 -8 Td
+(Phone: +91-120-4567890) Tj
+0 -8 Td
+(Email: admissions@eliteitech.ac.in) Tj
+0 -8 Td
+(Website: www.eliteitech.ac.in) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000000525 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+620
+%%EOF

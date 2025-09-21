@@ -1,0 +1,16 @@
+Student ID,Name,Subject,Marks,Grade,Result,Semester,Year
+EIT001,Rahul Sharma,Mathematics,85,A,Pass,3,2025
+EIT001,Rahul Sharma,Programming,92,A+,Pass,3,2025
+EIT001,Rahul Sharma,Database,88,A,Pass,3,2025
+EIT002,Priya Singh,Physics,78,B+,Pass,5,2025
+EIT002,Priya Singh,Electronics,82,A,Pass,5,2025
+EIT002,Priya Singh,Networks,75,B+,Pass,5,2025
+EIT003,Amit Kumar,Machine Learning,95,A+,Pass,1,2025
+EIT003,Amit Kumar,Data Science,90,A+,Pass,1,2025
+EIT003,Amit Kumar,Statistics,87,A,Pass,1,2025
+EIT004,Sneha Patel,Management,80,A,Pass,3,2025
+EIT004,Sneha Patel,Marketing,85,A,Pass,3,2025
+EIT004,Sneha Patel,Finance,78,B+,Pass,3,2025
+EIT005,Vikash Gupta,Programming,88,A,Pass,2,2025
+EIT005,Vikash Gupta,Web Development,82,A,Pass,2,2025
+EIT005,Vikash Gupta,Database,85,A,Pass,2,2025
